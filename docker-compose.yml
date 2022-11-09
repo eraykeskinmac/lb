@@ -1,0 +1,23 @@
+version: "3"
+services:
+  haproxy:
+    build: ./haproxy
+    container_name: haproxy
+    ports:
+      - "80:80"
+  nodeapp1:
+    image: getting-started
+    environment:
+      - APPID=4001
+  nodeapp2:
+    image: getting-started
+    environment:
+      - APPID=4002
+  nodeapp3:
+    image: getting-started
+    environment:
+      - APPID=4003
+  nodeapp4:
+    image: getting-started
+    environment:
+      - APPID=4004
